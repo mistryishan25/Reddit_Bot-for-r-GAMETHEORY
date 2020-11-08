@@ -58,7 +58,7 @@ public class Main extends Application {
          */ // THis code is not needed now as we have the code for a path that encloses a
             // "tile" shape
 
-        Path path = new Path();
+      /*  Path path = new Path();
         path.setStroke(Color.BLACK);
 
         MoveTo A = new MoveTo();
@@ -93,22 +93,8 @@ public class Main extends Application {
         path.getElements().addAll(A, AB, BC, CD, CA);
         // path.setFill(Color.BLACK);
         root.getChildren().addAll(path);
-
-        /*
-         * Shape shape = Shape.intersect(arc, arc2); Shape yes = Shape.subtract(arc,
-         * arc2); Shape shape2 = Shape.union(arc2, arc); Shape shape3 =
-         * Shape.subtract(shape, shape2); // int - uni Shape shape4 =
-         * Shape.subtract(shape2, shape); // uni - int Shape shape5 =
-         * Shape.subtract(shape4, shape3); Shape shape6 = Shape.subtract(shape5,
-         * shape3);
-         * 
-         * yes.setFill(Color.BLACK);
-         * 
-         * root.getChildren().add(yes);
-         */
-        // Shape shape4 = Shape.
-        // shape4.setStroke(Color.RED);
-        // root.getChildren().add(shape4);
+*/
+     
 
         for (double i = 40; i < 170; i += 10) {
             Circle circle1 = new Circle(300.0f, 300.0f, i);
@@ -127,6 +113,44 @@ public class Main extends Application {
                         + x_mid + "  Y =  " + y_mid);
             }
 
+        }
+
+        {
+            Path path8 = new Path();
+            path8.setStroke(Color.RED);
+            path8.setFill(Color.BLACK);
+
+            MoveTo A1 = new MoveTo();
+            A1.setX(260);
+            A1.setY(300);
+
+            LineTo AB1 = new LineTo();
+            AB1.setX(250);
+            AB1.setY(300);
+
+            ArcTo BC1 = new ArcTo();
+            BC1.setRadiusX(50);
+            BC1.setRadiusY(50);
+            BC1.setXAxisRotation(90);
+            BC1.setSweepFlag(false);
+            BC1.setX(264.6446609406726);
+            BC1.setY(335.3553390593274);
+
+            LineTo CD1 = new LineTo();
+            CD1.setX(271.7157287525381);
+            CD1.setY(328.2842712474619);
+
+            ArcTo CA1 = new ArcTo();
+            CA1.setRadiusX(40);
+            CA1.setRadiusY(40);
+            CA1.setXAxisRotation(45);
+            CA1.setSweepFlag(true);
+            CA1.setX(260);
+            CA1.setY(300);
+
+            path8.getElements().addAll(A1, AB1, BC1, CD1, CA1);
+
+            root.getChildren().addAll(path8);
         }
 
         // Creating a scene object
