@@ -42,21 +42,6 @@ public class Main extends Application {
         line4.getTransforms().add(rotate);
 
         root.getChildren().addAll(line1, line2, line3, line4);
-        /*
-         * Arc arc = new Arc(); arc.setCenterX(300.0f); arc.setCenterY(300.0f);
-         * arc.setRadiusX(150); arc.setRadiusY(150);
-         * 
-         * arc.setStartAngle(45); arc.setLength(45); arc.setType(ArcType.ROUND);
-         * arc.setStroke(Color.BLACK); root.getChildren().add(arc);
-         * 
-         * Arc arc2 = new Arc(); arc2.setLength(45); arc2.setStartAngle(45);
-         * arc2.setRadiusX(140); arc2.setRadiusY(140);
-         * 
-         * arc2.setFill(Color.WHITE); arc2.setCenterX(300.0f); arc2.setCenterY(300.0f);
-         * arc2.setType(ArcType.ROUND); arc2.setStroke(Color.LIGHTGRAY);
-         * root.getChildren().add(arc2);
-         */ // THis code is not needed now as we have the code for a path that encloses a
-            // "tile" shape
 
       /*  Path path = new Path();
         path.setStroke(Color.BLACK);
